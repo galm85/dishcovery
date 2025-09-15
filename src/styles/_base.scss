@@ -7,11 +7,18 @@
   font-family: v.$main_font;
 }
 
+// elements
+a{
+  text-decoration: none;
+}
 
+
+
+// classes
 .padding-inline{
   padding-inline: 240px;
 }
 
-a{
-  text-decoration: none;
+.app-main{
+  min-height: 90vh;
 }

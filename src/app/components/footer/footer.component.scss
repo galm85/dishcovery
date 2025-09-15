@@ -1,0 +1,18 @@
+@use 'variables' as v;
+
+.footer{
+  text-align: center;
+  padding-block: 50px;
+  background-color: v.$light;
+  .footer-logo{
+    width: 70px;
+    margin-bottom: 20px;
+  }
+
+  .copyright{
+    color: v.$white;
+    a{
+      color: v.$text_light;
+    }
+  }
+}
