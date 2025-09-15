@@ -3,10 +3,12 @@ import { Recipe } from '../../interfaces/recipe';
 import { RecipesService } from '../../services/recipes.service';
 import { ActivatedRoute,RouterLink } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { Breadcrumbs } from '../../interfaces/breadcrumbs';
+import { BreadcrumbsComponent } from "../../components/breadcrumbs/breadcrumbs.component";
 
 @Component({
   selector: 'app-recipe',
-  imports: [CommonModule, RouterLink],
+  imports: [CommonModule, RouterLink, BreadcrumbsComponent],
   templateUrl: './recipe.component.html',
   styleUrl: './recipe.component.scss'
 })
@@ -17,6 +19,7 @@ export class RecipeComponent implements OnInit {
 
   recipe:Recipe = {} as Recipe;
   displayImage:boolean = false;
+  breadCrumbs:Breadcrumbs = {} as Breadcrumbs;
 
   toggleDisplayImage():void{
     this.displayImage = !this.displayImage;
@@ -28,6 +31,7 @@ export class RecipeComponent implements OnInit {
       const recipe = this.recipeService.getRecipeById(reciptId);
       if(recipe){
         this.recipe = {...recipe}
+        this.breadCrumbs = {current:recipe.title,links:[{label:recipe.category_id,link:'/'+recipe.category_id}]}
       }
     }
   }

@@ -4,7 +4,7 @@
   display: flex;
   gap: 30px;
   color: v.$text;
-  padding-top: 50px;
+  padding-top: 20px;
   position: relative;
   .recipe-content{
     flex:1;
@@ -60,9 +60,9 @@
 
   .image-modal{
     position: absolute;
-    top: 50px;
+    top: 0;
     left: 50px;
-    bottom: 50px;
+
     right: 50px;
     z-index: 50px;
 

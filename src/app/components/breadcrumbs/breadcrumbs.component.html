@@ -1,0 +1,13 @@
+<nav class="breadcrumbs padding-inline" aria-label="breadcrumbs">
+  <ul>
+    <li class="breadcrumb-link">
+      <a routerLink="/">Home</a>
+      <span>/</span>
+    </li>
+    <li class="breadcrumb-link" *ngFor="let link of breadcrumbs.links">
+      <a [routerLink]="link.link">{{link.label}}</a>
+      <span>/</span>
+    </li>
+    <li class="breadcrumb-link current">{{breadcrumbs.current}}</li>
+  </ul>
+</nav>

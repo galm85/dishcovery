@@ -1,0 +1,25 @@
+@use 'variables' as v;
+
+.breadcrumbs{
+
+  padding-block: 30px;
+  ul{
+    list-style-type: none;
+    display: flex;
+    gap: 10px;
+  }
+
+  .breadcrumb-link{
+    font-weight: 300;
+    text-transform: capitalize;
+    a{
+      display: inline-block;
+      padding-inline-end: 10px;
+      color: v.$text;
+    }
+    &.current{
+      font-weight: 700;
+    }
+  }
+
+}

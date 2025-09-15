@@ -1,7 +1,8 @@
+<app-breadcrumbs [breadcrumbs]="breadCrumbs"></app-breadcrumbs>
+
 <div class="recipe-page padding-inline">
 
   <ng-container *ngIf="recipe.id; else noRecipe">
-
     <div class="recipe-content">
       <h1 class="recipe-title">{{recipe.title}}</h1>
       <span class="recipe-tab">{{recipe.category_id}}</span>
