@@ -1,0 +1,15 @@
+<section class="recipes-carusel">
+  <h3 class="carusel-title">{{title}}</h3>
+  <swiper-container
+    slides-per-view="4"
+    space-between="20"
+>
+    <swiper-slide *ngFor="let recipe of recipes">
+      <a class="recipe-card" [routerLink]="'/recipe/' + recipe.id">
+        <img class="recipe-card-image" [src]="recipe.image" [alt]="recipe.title">
+        <h4 class="recipe-card-title">{{recipe.title}}</h4>
+      </a>
+    </swiper-slide>
+
+  </swiper-container>
+</section>

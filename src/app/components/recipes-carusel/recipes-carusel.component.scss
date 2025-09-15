@@ -1,0 +1,32 @@
+@use 'variables' as v;
+
+.recipes-carusel{
+  padding-block: 35px;
+
+  .carusel-title{
+    color: v.$text;
+    font-size: 32px;
+    font-weight: 300;
+    margin-bottom: 20px;
+
+  }
+
+  .recipe-card{
+    border-radius:  10px 10px 0 0;
+    overflow: hidden;
+
+    .recipe-card-image{
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+    }
+
+    .recipe-card-title{
+      font-size: 18px;
+      height: 40px;
+      text-align: center;
+      color: v.$text_light;
+      font-weight: 300;
+    }
+  }
+}
