@@ -1,0 +1,17 @@
+@use 'variables' as v;
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: v.$main_font;
+}
+
+
+.padding-inline{
+  padding-inline: 240px;
+}
+
+a{
+  text-decoration: none;
+}

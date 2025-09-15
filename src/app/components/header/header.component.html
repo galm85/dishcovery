@@ -1,1 +1,27 @@
-<p>header works!</p>
+<header class="padding-inline header">
+  <nav class="navigation">
+    <ul class="menu-items">
+      <!-- <a routerLink="/" routerLinkActive="active" class="nav-logo">🍲</a> -->
+      <a routerLink="/" routerLinkActive="active" class="nav-logo">
+        <img src="assets/images/logo.png" alt="logo">
+      </a>
+    </ul>
+  </nav>
+  <div class="search-bar">
+    <form (ngSubmit)="onSearch(searchInput.value)">
+      <input type="text" class="search-input" placeholder="Search" #searchInput/>
+      <button class="search-btn">Search</button>
+    </form>
+  </div>
+  <div class="user-menu">
+    <button class="user-menu-btn" (click)="toggleUserMenu()">User</button>
+    <ul class="user-menu-items" [class.show]="isUserMenuOpen">
+        <li class="user-menu-item">
+          <a routerLink="/profile">Profile</a>
+        </li>
+        <li class="user-menu-item">
+          <a routerLink="/favorites">Favorites</a>
+        </li>
+    </ul>
+  </div>
+</header>
