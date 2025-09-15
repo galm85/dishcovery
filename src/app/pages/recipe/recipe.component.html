@@ -1,0 +1,42 @@
+<div class="recipe-page padding-inline">
+
+  <ng-container *ngIf="recipe.id; else noRecipe">
+
+    <div class="recipe-content">
+      <h1 class="recipe-title">{{recipe.title}}</h1>
+      <span class="recipe-tab">{{recipe.category_id}}</span>
+      <span class="recipe-tab">{{recipe.level}}</span>
+      <p class="recipe-description">{{recipe.description}}</p>
+      <div class="recipe-list recipe-ing" *ngIf="recipe.ing">
+        <h2>Ingirients</h2>
+        <ul>
+          <li *ngFor="let ing of recipe.ing">{{ing}}</li>
+        </ul>
+      </div>
+       <div class="recipe-list recipe-ins" *ngIf="recipe.ing">
+        <h2>Instractions</h2>
+        <ul>
+          <li *ngFor="let ins of recipe.ins">{{ins}}</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="recipe-image">
+      <img *ngIf="recipe.image" [src]="recipe.image" [alt]="recipe.title" (click)="toggleDisplayImage()">
+    </div>
+
+
+    <div class="image-modal" *ngIf="displayImage">
+      <button class="close-modal" (click)="toggleDisplayImage()">X</button>
+      <img [src]="recipe.image" [alt]="recipe.title" (click)="toggleDisplayImage()">
+    </div>
+ </ng-container>
+
+     <ng-template #noRecipe>
+        <div>
+          <h1>Recipe Not Found</h1>
+          <p>Sorry, we couldn't find the recipe you're looking for.</p>
+          <a routerLink="/">← Back to Home</a>
+        </div>
+    </ng-template>
+</div>

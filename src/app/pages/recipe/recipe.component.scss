@@ -1,0 +1,89 @@
+@use 'variables' as v;
+
+.recipe-page{
+  display: flex;
+  gap: 30px;
+  color: v.$text;
+  padding-top: 50px;
+  position: relative;
+  .recipe-content{
+    flex:1;
+
+    .recipe-title{
+      margin-bottom: 20px;
+      font-size: 36px;
+      text-transform: capitalize;
+    }
+
+    .recipe-tab{
+      display: inline-block;
+      background-color:v.$light;
+      padding: 3px 8px;
+      margin-inline-end: 5px;
+      border-radius: 20px;
+      color: v.$white;
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 20px;
+    }
+
+    .recipe-description{
+      margin-top: 20px;
+      font-weight: 300;
+      font-size: 18px;
+      line-height: 22px;
+    }
+
+    .recipe-list{
+      margin-top: 30px;
+      h2{
+        text-transform: uppercase;
+        font-size: 24px;
+        margin-bottom: 10px;
+      }
+      li{
+        font-size: 18px;
+        line-height: 24px;
+        font-weight: 300;
+      }
+    }
+  }
+
+  .recipe-image{
+    width: 30%;
+
+    img{
+      width: 100%;
+      cursor: pointer;
+    }
+  }
+
+  .image-modal{
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    bottom: 50px;
+    right: 50px;
+    z-index: 50px;
+
+    img{
+      width: 100%;
+    }
+
+    .close-modal{
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      z-index: 20;
+      background: none;
+      font-size: 40px;
+      border:1px solid v.$text;
+      background-color: rgba($color: v.$text, $alpha: 0.25);
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      cursor: pointer;
+    }
+  }
+
+}

@@ -294,4 +294,8 @@ export class RecipesService {
     return this.recipes().filter(recipe => recipe.title.includes(searchValue));
   }
 
+  getRecipeById(recipeId:string):Recipe | undefined{
+    return this.recipes().find(recipe => recipeId === recipe.id);
+  }
+
 }
