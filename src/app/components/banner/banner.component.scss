@@ -1,0 +1,46 @@
+@use 'variables' as v;
+
+.banner{
+  width: 100%;
+  height: 400px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  .banner-image{
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: blur(1.5px);
+    }
+  }
+  .banner-content{
+    background-color: rgba($color: v.$light, $alpha: 0.2);
+    padding: 20px 50px;
+    border-radius: 30px;
+    .banner-title{
+      font-size: 32px;
+      color: v.$white;
+    }
+    .banner-text{
+      font-size: 20px;
+      color: v.$white;
+    }
+    .banner-link{
+      display: block;
+      padding: 5px 10px;
+      background-color: v.$yellow;
+      width: fit-content;
+      margin-top: 10px;
+      border-radius: 8px;
+      font-size: 18px;
+      color: v.$blue;
+    }
+  }
+}

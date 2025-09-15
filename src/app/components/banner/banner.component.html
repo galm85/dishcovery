@@ -1,0 +1,10 @@
+<section class="banner padding-inline">
+  <div class="banner-image" *ngIf="image">
+    <img [src]="image" [alt]="title">
+  </div>
+  <div class="banner-content ">
+    <h1 class="banner-title">{{title}}</h1>
+    <p class="banner-text">{{text}}</p>
+    <a class="banner-link" [routerLink]="link">click</a>
+  </div>
+</section>
