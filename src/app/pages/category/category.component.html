@@ -1,0 +1,35 @@
+<app-breadcrumbs [breadcrumbs]="breadcrumbs"></app-breadcrumbs>
+
+<div class="category-page padding-inline">
+
+  <ng-container *ngIf="category?.id; else noCategory">
+
+    <div div class="category-data">
+      <h1 class="category-title">{{category?.title}}</h1>
+    </div>
+
+    <div *ngIf="recipes.length" class="recipe-grid" >
+        <a *ngFor="let recipe of recipes" class="recipe-card" [routerLink]="'/recipe/'+recipe.id">
+          <img class="recipe-image" [src]="recipe.image" [alt]="recipe.title">
+          <h3 class="recipe-title">{{recipe.title}} <span>{{recipe.level}}</span></h3>
+          <p class="recipe-description">{{recipe.description}}</p>
+        </a>
+    </div>
+
+
+  </ng-container>
+
+
+
+
+
+   <ng-template #noCategory>
+        <div>
+          <h1>Category Not Found</h1>
+          <p>Sorry, we couldn't find the Category you're looking for.</p>
+          <a routerLink="/">← Back to Home</a>
+        </div>
+    </ng-template>
+
+
+</div>

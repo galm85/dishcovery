@@ -41,4 +41,8 @@ export class CategoriesService {
   getAllCategories():Category[]{
     return this.categories();
   }
+
+  getCategoryById(id:string):Category | undefined{
+    return this.categories().find(cat => cat.id === id);
+  }
 }

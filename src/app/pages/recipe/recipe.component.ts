@@ -31,7 +31,7 @@ export class RecipeComponent implements OnInit {
       const recipe = this.recipeService.getRecipeById(reciptId);
       if(recipe){
         this.recipe = {...recipe}
-        this.breadCrumbs = {current:recipe.title,links:[{label:recipe.category_id,link:'/'+recipe.category_id}]}
+        this.breadCrumbs = {current:recipe.title,links:[{label:recipe.category_id,link:'/category/'+recipe.category_id}]}
       }
     }
   }
