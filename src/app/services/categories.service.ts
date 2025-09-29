@@ -5,27 +5,27 @@ const tempCategories:Category[] = [
   {
     "id": "breakfast",
     "title": "Breakfast",
-    "image": ""
+    "image": "https://i.cbc.ca/1.7428441.1736538341!/fileImage/httpImage/image.jpg_gen/derivatives/16x9_1180/1384617341.jpg?im="
   },
   {
     "id": "lunch",
     "title": "Lunch",
-    "image": ""
+    "image": "https://i.cbc.ca/1.7428441.1736538341!/fileImage/httpImage/image.jpg_gen/derivatives/16x9_1180/1384617341.jpg?im="
   },
   {
     "id": "dinner",
     "title": "Dinner",
-    "image": ""
+    "image": "https://i.cbc.ca/1.7428441.1736538341!/fileImage/httpImage/image.jpg_gen/derivatives/16x9_1180/1384617341.jpg?im="
   },
   {
     "id": "desserts",
     "title": "Desserts",
-    "image": ""
+    "image": "https://i.cbc.ca/1.7428441.1736538341!/fileImage/httpImage/image.jpg_gen/derivatives/16x9_1180/1384617341.jpg?im="
   },
   {
     "id": "quickmeals",
     "title": "Quick Meals",
-    "image": ""
+    "image": "https://i.cbc.ca/1.7428441.1736538341!/fileImage/httpImage/image.jpg_gen/derivatives/16x9_1180/1384617341.jpg?im="
   }
 ]
 
