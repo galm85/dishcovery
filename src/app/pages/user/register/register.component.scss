@@ -1,0 +1,87 @@
+@use 'variables' as v;
+
+.register-page{
+  max-width: 900px;
+  margin: auto;
+  margin-block: 30px;
+  color: v.$text;
+
+
+  .page-title{
+    font-size: 32px;
+    margin-bottom: 10px;
+  }
+
+  .page-subtitle{
+    font-size: 18px;
+    font-weight: 300;
+    margin-bottom: 50px;
+  }
+
+  .registration-form{
+
+    .form-group{
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 30px;
+      label{
+        font-size: 14px;
+        font-weight: 300;
+        margin-bottom: 5px;
+        padding-inline-start: 5px;
+
+      }
+      input{
+        padding: 8px 12px;
+        border: 1px solid v.$text_light;
+        border-radius: 4px;
+        margin-bottom: 5px;
+      }
+      .error-message{
+        font-size: 14px;
+        font-weight: 300;
+        padding-inline-start: 5px;
+
+        color: v.$red;
+      }
+    }
+
+    .form-actions{
+      text-align: center;
+      margin-bottom: 20px;
+      .submit-btn{
+        color: v.$text;
+        background-color: transparent;
+        border: 1px solid v.$text;
+        padding: 8px 16px;
+        border-radius: 4px;
+        font-size: 18px;
+        text-transform: uppercase;
+        transition: all ease 0.2s;
+        cursor: pointer;
+        &:hover{
+          color: v.$white;
+          background-color: v.$text;
+        }
+        &:disabled{
+          color: v.$text_light;
+          background-color: transparent;
+          border: 1px solid v.$text_light;
+          cursor:not-allowed;
+        }
+      }
+    }
+
+
+    .login-link{
+      text-align: center;
+      font-size: 16px;
+      font-weight: 300;
+      a{
+        text-decoration: underline;
+        color: v.$dark;
+        font-weight: 400;
+      }
+    }
+  }
+}
