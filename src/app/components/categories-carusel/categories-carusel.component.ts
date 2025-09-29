@@ -3,13 +3,16 @@ import { RouterLink } from "@angular/router";
 import { register } from 'swiper/element/bundle';
 import { CategoriesService } from '../../services/categories.service';
 import { Category } from '../../interfaces/category';
+import { CommonModule } from '@angular/common';
 
 
 @Component({
   selector: 'app-categories-carusel',
-  imports: [],
+  imports: [CommonModule, RouterLink],
   templateUrl: './categories-carusel.component.html',
-  styleUrl: './categories-carusel.component.scss'
+  styleUrl: './categories-carusel.component.scss',
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
+
 })
 export class CategoriesCaruselComponent implements OnInit {
 
@@ -18,6 +21,8 @@ export class CategoriesCaruselComponent implements OnInit {
   categories:Category[] = [];
 
   ngOnInit(): void {
+
+    this.categories = this.categoriesService.getAllCategories();
 
   }
 }

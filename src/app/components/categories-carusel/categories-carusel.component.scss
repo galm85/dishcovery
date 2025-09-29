@@ -1,0 +1,46 @@
+@use 'variables' as v;
+
+.categories-carusel{
+  padding-block: 30px;
+
+  .categories-title{
+    font-size: 44px;
+    font-weight: 400;
+    padding-block: 30px;
+    color: v.$text;
+  }
+
+  .category-slide{
+    position: relative;
+    display: block;
+    border-radius: 10px;
+    overflow: hidden;
+
+    img{
+      width: 100%;
+    }
+
+    .slide-title{
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 2;
+      background-color: rgba($color: #000000, $alpha: 0.4);
+      font-size: 40px;
+      color: v.$white;
+      text-transform: uppercase;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all ease 0.2s;
+
+      &:hover{
+        background-color: rgba($color: #000000, $alpha: 0.7);
+        font-size: 44px;
+      }
+    }
+
+  }
+}
